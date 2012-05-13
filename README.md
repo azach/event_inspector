@@ -15,12 +15,11 @@ How to use
 
 4. Write any events you want to log to this container and fire an event_fired JavaScript event. Example JavaScript:
 
-```var eventFired = document.createEvent('Event');
+```javascript
+var eventFired = document.createEvent('Event');
 var eventsDiv;
 eventFired.initEvent('event_fired', true, true);
-
 try {
-
   if (!eventsDiv) {
     eventsDiv = document.getElementById('events_inspector');
     eventsDiv.style.display = 'none';
@@ -32,7 +31,6 @@ try {
     eventsArray.unshift(params.event);
     eventsDiv.innerText = JSON.stringify(eventsArray);
   }
-
   eventsDiv.dispatchEvent(eventFired);
-
-} catch(err) { }```
+} catch(err) { }
+```
