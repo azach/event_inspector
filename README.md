@@ -36,5 +36,9 @@ var logEvent(params) = function() {
   } catch(err) { }
 }
 //Log an event to the event inspector
-logEvent({name: 'My Event', url: window.location.href});
+logEvent({name: 'page_view', page: window.location.pathname, domain: document.domain});
 ```
+
+This produces an event in the inspector like so:
+
+![Example event in the inspector popup](example.png)
