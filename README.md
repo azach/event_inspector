@@ -41,4 +41,4 @@ logEvent({name: 'page_view', page: window.location.pathname, domain: document.do
 
 This produces an event in the inspector like so:
 
-![Example event in the inspector popup](./example.png)
+![Example event in the inspector popup](./event_inspector/raw/master/example.png)
