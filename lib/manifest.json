@@ -1,0 +1,31 @@
+{
+  "name": "Event Inspector",
+  "version": "0.1",
+  "manifest_version": 2,
+  "icons": {
+    "16": "inspector-16.png",
+    "32": "inspector-32.png",
+    "48": "inspector-48.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost/*"
+      ],
+      "js": [
+        "event_inspector.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_icon": "inspector-48.png",
+    "default_title": "Event Inspector",
+    "default_popup": "popup.html"
+  }
+}
